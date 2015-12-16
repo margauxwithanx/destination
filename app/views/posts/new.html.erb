@@ -1,0 +1,36 @@
+
+  <div class="text-center" style="padding:90px 0">
+   <%= form_for [@city,@post] do |f| %>
+    
+    <h1>NEW POST</h1> 
+    
+    <div class="post-background" id="post"></div>
+    <div class="container">
+     <div class="col-sm-4 col-sm-offset-4">
+       <div class="well">
+  			<% flash.each do |key, value| %>
+                        <div class="alert alert-<%= key %>"><%= value %></div>
+                        <% end %>
+
+
+            <%= f.text_field :title, class: "form-control",placeholder: "Title" %> 
+            <%= f.text_field :location, class: "form-control", placeholder: "Location", :id => 'geocomplete' %> 
+    		<%= f.text_field :content, class: "form-control", placeholder: "Content" %>
+			<%= f.text_field :tag_list, class: "form-control", placeholder: "Tags" %>
+
+	<%= f.submit "ADD!", class: "login-button" %>
+        
+</div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  </div>
+
+
+<script type="text/javascript">
+	geo()
+</script>
+
+
+ 

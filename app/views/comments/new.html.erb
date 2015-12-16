@@ -1,0 +1,30 @@
+
+
+
+<div class="post-bg">
+  <div class="text-center" style="padding:100px 0">
+    <div class="col-md-12 col-xs-12" align="center">
+      <div class="center-block">
+        <div class="color-box">
+          <%= form_for [@city,@post, @comment] do |f| %>
+          <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
+          <br>
+
+          <h2> COMMENTS </h2>
+
+          <h3>  <%=@post.title%> </h3> 
+          <%= f.text_field :content, class: "form-control", placeholder: "Your Comment Here!" %> 
+          <br>
+          <%=f.submit "ADD",class: "main-button" %>
+          <%end%>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+
