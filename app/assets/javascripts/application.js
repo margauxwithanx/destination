@@ -13,12 +13,14 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require app.js
 //= require local_time
 //= require jquery.geocomplete
 //= require jquery.geocomplete.min
 //= require turbolinks
+//= require bootstrap
 //= require bootstrap-sprockets
+//= require map
+//= require app
 //= require_tree .
 
 

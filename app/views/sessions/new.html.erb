@@ -3,40 +3,33 @@
 
 		<header id="header">
 			<div class="container">
+				<div class="row">
 
+					<div class="col-md-6 features-leftcol">
+						<img src="http://i.imgur.com/aIBTMyG.png" width="350" center alt>
+					</div>
 
-				<div class="col-md-6 features-leftcol">
-					<img src="http://i.imgur.com/aIBTMyG.png" width="350" center alt>
-				</div>
+					<!-- form section -->
+					<div class="col-md-6 features-rightcol">
 
-				<!-- form section -->
-				<div class="col-md-6 features-rightcol fadeInUp">
-					<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+						<%= form_for @user, url: "/sessions", method: "post" do |f| %>
 
-				</div>
-				<h2>Log In</h2>
+						<h2>Log In</h2>
 
-				<form action="#" method="post">
-					<% flash.each do |key, value| %>
-					<div class="alert alert-<%= key %>"><%= value %></div>
-					<% end %>
-					<%= f.text_field :email, class: "form-control", id: "reg_email", placeholder: "Email" %>
+						<% flash.each do |key, value| %>
+						<div class="alert alert-<%= key %>"><%= value %></div>
+						<% end %>
+						<%= f.text_field :email, class: "form-control", id: "reg_email", placeholder: "Email" %>
 
-					<%= f.password_field :password, class: "form-control", id: "reg_password", placeholder: "Password" %>
+						<%= f.password_field :password, class: "form-control", id: "reg_password", placeholder: "Password" %>
 
-					<%= f.submit "CLICK!", class: "btn" %>
+						<%= f.submit "SUBMIT", class: "btn" %>
+					</div>
 				</div>
 			</div>
-
-		</div>
-
-		<% end %> 
-
-	</form>
-</div>
-</div>
-</header>
-</div>
+		</header>
+	</div>
+	<% end %> 
 </section>
 
 

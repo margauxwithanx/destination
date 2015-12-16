@@ -1,11 +1,12 @@
 
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+@import url("https://fonts.googleapis.com/css?family=Raleway:200|Source+Sans+Pro:300,600,300italic,600italic");
 
 
 /* Reset */
 
   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
@@ -15,33 +16,45 @@
   }
 
   article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    font-family: 'Raleway', sans-serif;
     display: block;
   }
 
   body {
+    font-family: 'Raleway', sans-serif;
     line-height: 1;
   }
 
   ol, ul {
+    font-family: 'Raleway', sans-serif;
     list-style: none;
   }
 
   blockquote, q {
+    font-family: 'Raleway', sans-serif;
     quotes: none;
   }
 
   blockquote:before, blockquote:after, q:before, q:after {
+    font-family: 'Raleway', sans-serif;
     content: '';
     content: none;
   }
 
   table {
+    font-family: 'Raleway', sans-serif;
     border-collapse: collapse;
     border-spacing: 0;
   }
 
   body {
+    font-family: 'Raleway', sans-serif;
     -webkit-text-size-adjust: none;
+  }
+
+  b {
+     font-family: 'Raleway', sans-serif;
+     font-weight: 100;
   }
 
 
@@ -56,8 +69,8 @@
 /* Basic */
 
   body, input, select, textarea {
-    color: black;
     font-family: 'Raleway', sans-serif;
+    color: black;
     font-size: 15pt;
     font-weight: 300 !important;
     letter-spacing: -0.025em;
@@ -65,14 +78,16 @@
   }
 
   h2 {
+    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20pt;
     letter-spacing: 0.1em;
     margin: 0 0 1em 0;
   }
 
     body.loading * {
+      font-family: 'Raleway', sans-serif;
       -moz-animation: none !important;
       -webkit-animation: none !important;
       -ms-animation: none !important;
@@ -80,6 +95,7 @@
     }
 
   a {
+    font-family: 'Raleway', sans-serif;
     -moz-transition: border-color 0.2s ease-in-out;
     -webkit-transition: border-color 0.2s ease-in-out;
     -ms-transition: border-color 0.2s ease-in-out;
@@ -90,11 +106,14 @@
   }
 
     a:hover {
-      border-color: transparent;
+      font-family: 'Raleway', sans-serif;
+      border-color: white;
     }
 
+/* Button */
 .btn { 
-  border: solid 2px white; 
+  font-family: 'Raleway', sans-serif;
+  border: 3px solid white; 
    border-radius: 3px; 
   -webkit-border-radius: 3px; 
   -moz-border-radius: 3px; 
@@ -113,9 +132,29 @@
   color: #02475f;  
 }
 
+
+/* Background */
+
 .login-background  {
-  background: #fd9372;
-  padding: 150px 0;
+  background: #fbb040;
+  padding: 120px 0;
+   /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.signup-background  {
+  background: #4dc3db;
+  padding: 120px 0;
    /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
@@ -138,9 +177,18 @@
 
   /* form section */
 
-.form-control {
+form {
     display: block;
-    width: 300px;
+    margin-top: 0em;
+
+}
+
+.form-control {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 12px;
+    margin-bottom: 14px;90
+    display: block;
+    width: 100%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -151,9 +199,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    margin-top: 12px;
-     margin-bottom: 14px;
+    box-shadow: none;
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -162,6 +208,7 @@
 
 #form input {
   height: 50px;
+
 }
 
 #form input[type="submit"] {
@@ -171,6 +218,7 @@
   -moz-border-radius: 3px; 
   padding: 15px 50px; 
   color: white; 
+  background: transparent;
   text-transform: uppercase; 
   letter-spacing: 3px; 
   transition: all 0.5s ease; 
@@ -178,9 +226,15 @@
 }
 
 #form input[type="submit"]:hover {
-  text-decoration: none; 
-  border-color: #02475f; 
   color: #02475f; 
+  border-color: #02475f; 
+   
+}
+
+input [type="submit"]:hover {
+  font:;
+  color: #02475f; 
+  border-color: #02475f; 
 }
 
 /* Wrapper */
@@ -520,10 +574,11 @@
     text-align: center;
     top: -1em;
     vertical-align: middle;
-    width: 90%;
+    width: 95%;
   }
 
     #header h1 {
+      font-family: 'Raleway', sans-serif;
       font-size: 4.35em;
       font-weight: 900;
       letter-spacing: -0.035em;
@@ -531,17 +586,20 @@
     }
 
     #header p {
+      font-family: 'Raleway', sans-serif;
       font-size: 1.25em;
       margin: 0.75em 0 0.25em 0;
       opacity: 0.75;
     }
 
     #header nav {
+      font-family: 'Raleway', sans-serif;
       margin: 1.5em 0 0 0;
 
     }
 
       #header nav li {
+        font-family: 'Raleway', sans-serif;
         -moz-animation: nav-icons 0.5s ease-in-out forwards;
         -webkit-animation: nav-icons 0.5s ease-in-out forwards;
         -ms-animation: nav-icons 0.5s ease-in-out forwards;
@@ -633,7 +691,7 @@
           animation-delay: 4.75s;
         }
 
-      #header nav a {
+      #header nav  {
         -webkit-tap-highlight-color: transparent;
         -webkit-touch-callout: none;
         border: 0;
@@ -645,6 +703,7 @@
 /* Footer */
 
   #footer {
+    font-family: 'Raleway', sans-serif;
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
     background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
@@ -671,6 +730,7 @@
     /* Basic */
 
       body, input, select, textarea {
+        font-family: 'Raleway', sans-serif;
         font-size: 13pt;
       }
 
@@ -753,6 +813,7 @@
     /* Basic */
 
       body, input, select, textarea {
+        font-family: 'Raleway', sans-serif;
         font-size: 12pt;
       }
 
@@ -839,6 +900,7 @@
       }
 
       body, input, select, textarea {
+        font-family: 'Raleway', sans-serif;
         font-size: 11pt;
       }
 

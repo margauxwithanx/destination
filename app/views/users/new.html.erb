@@ -1,13 +1,22 @@
+<section id="form">
+  <div class="signup-background">
 
-    <div class="text-center" style="padding:90px 0">
-        <%= form_for @user, :html =>{ :multipart => true } do |f| %>
-        <h1>SIGN UP</h1> 
+    <header id="header">
+      <div class="container">
+        <div class="row">
 
-        <div class="signup-background" id="signup"></div>
-            <div class="container">
-              <div class="col-sm-4 col-sm-offset-4">
-                <div class="well">
-                  <div class= "errors" autofocus>
+          <div class="col-md-6 features-leftcol">
+            <img src="http://i.imgur.com/BHjUSMs.png" width="350" center alt>
+          </div>
+
+          <!-- form section -->
+          <div class="col-md-6 features-rightcol">
+
+           <%= form_for @user, :html =>{ :multipart => true } do |f| %>
+
+            <h2>Sign Up</h2>
+
+            <div class= "errors" autofocus>
                     <% if @user.errors.any? %>
                     <div id="error_explanation">
                       <h2 class="error-warning">
@@ -23,30 +32,20 @@
 
                       <%= f.text_field :username, class: "form-control", id: "reg_username", placeholder: "User Name" %>
 
-                      <%= f.text_field :artist_name, class: "form-control", id: "reg_artist_name",  placeholder: "Artist Name" %>
-
-                      <%= f.text_field :current_city, class: "form-control", id: "reg_current_city", placeholder: "Current City" %>
-
                       <%= f.text_field :email, class: "form-control", id: "reg_email", placeholder: "Email" %>
 
                       <%= f.password_field :password, class: "form-control", id: "reg_password", placeholder: "Password" %>
 
-                      <h5> Yo! Select a Hella Tight Profile Pic! </h5>
-                      <%= f.file_field :avatar %>
+                      <h5> CHOOSE A PROFILE PIC </h5>
+                      <%= f.file_field :avatar, class: "button" %>
 
-                      <%= f.submit "CLICK!", class: "login-button" %>
+                      <%= f.submit "SUBMIT", class: "button" %>
                     </div>
                     <% end %>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
         </div>
-
-                    
-                  
-
-
-          
-
-
+      </div>
+    </header>
+  </div>
+  
+</section>
