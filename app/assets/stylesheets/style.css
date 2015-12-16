@@ -72,11 +72,6 @@
     margin: 0 0 1em 0;
   }
 
-  body {
-    background: #fff;
-    overflow: hidden;
-  }
-
     body.loading * {
       -moz-animation: none !important;
       -webkit-animation: none !important;
@@ -89,7 +84,6 @@
     -webkit-transition: border-color 0.2s ease-in-out;
     -ms-transition: border-color 0.2s ease-in-out;
     transition: border-color 0.2s ease-in-out;
-    border-bottom: dotted 1px;
     color: inherit;
     outline: 0;
     text-decoration: none;
@@ -101,14 +95,92 @@
 
 .btn { 
   border: solid 2px white; 
+   border-radius: 3px; 
+  -webkit-border-radius: 3px; 
+  -moz-border-radius: 3px; 
   padding: 15px 50px; 
-  color: white; text-transform: 
-  uppercase; letter-spacing: 3px; 
+  color: white; 
+  text-transform: uppercase; 
+  letter-spacing: 3px; 
+  transition: all 0.5s ease; 
+  display: inline-block; 
   
 }
 
 .btn:hover, .btn:focus { 
-  border: solid 2px #333; 
+  text-decoration: none; 
+  border-color: #02475f; 
+  color: #02475f;  
+}
+
+.login-background  {
+  background: #fd9372;
+  padding: 150px 0;
+   /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.features-leftcol { 
+  padding-right: 60px; 
+}
+.features-rightcol { 
+  padding-left: 60px; }
+
+  /* form section */
+
+.form-control {
+    display: block;
+    width: 300px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    margin-top: 12px;
+     margin-bottom: 14px;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  }
+
+
+#form input {
+  height: 50px;
+}
+
+#form input[type="submit"] {
+  border: solid 2px white; 
+   border-radius: 3px; 
+  -webkit-border-radius: 3px; 
+  -moz-border-radius: 3px; 
+  padding: 15px 50px; 
+  color: white; 
+  text-transform: uppercase; 
+  letter-spacing: 3px; 
+  transition: all 0.5s ease; 
+  display: inline-block; 
+}
+
+#form input[type="submit"]:hover {
+  text-decoration: none; 
+  border-color: #02475f; 
+  color: #02475f; 
 }
 
 /* Wrapper */
@@ -466,6 +538,7 @@
 
     #header nav {
       margin: 1.5em 0 0 0;
+
     }
 
       #header nav li {
@@ -567,45 +640,7 @@
         display: inline-block;
       }
 
-        #header nav a:before {
-          -moz-transition: all 0.2s ease-in-out;
-          -webkit-transition: all 0.2s ease-in-out;
-          -ms-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-          border-radius: 100%;
-          border: solid 1px #fff;
-          display: block;
-          font-size: 1.75em;
-          height: 2.5em;
-          line-height: 2.5em;
-          position: relative;
-          text-align: center;
-          top: 0;
-          width: 2.5em;
-        }
-
-        #header nav a:hover {
-          font-size: 1.1em;
-        }
-
-          #header nav a:hover:before {
-            background-color: rgba(255, 255, 255, 0.175);
-            color: #fff;
-          }
-
-        #header nav a:active {
-          font-size: 0.95em;
-          background: none;
-        }
-
-          #header nav a:active:before {
-            background-color: rgba(255, 255, 255, 0.35);
-            color: #fff;
-          }
-
-        #header nav a span {
-          display: none;
-        }
+  
 
 /* Footer */
 
@@ -623,6 +658,11 @@
     text-align: center;
     width: 100%;
   }
+
+
+
+
+
 
 /* Wide */
 
@@ -874,27 +914,7 @@
       width: 900px;
     }
 
-  /* Header */
-
-    #header h1 {
-      font-size: 2.5em;
-    }
-
-    #header p {
-      font-size: 1em;
-    }
-
-    #header nav {
-      font-size: 1em;
-    }
-
-      #header nav a:hover {
-        font-size: 1em;
-      }
-
-      #header nav a:active {
-        font-size: 1em;
-      } }
+  
 
 /* Mobile (Portrait) */
 
