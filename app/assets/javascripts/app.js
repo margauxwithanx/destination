@@ -22,21 +22,21 @@ function geo(){
             var id= $('.map').attr('id');
             console.log("the id is " ,id);
             switch (id) {
-                case 'mapsan-francisco':
+                case 'mapreykjavik':
 
                     var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
                         zoom: 12,
                 // The latitude and longitude to center the map (always required)
-                        center: new google.maps.LatLng(37.78, -122.44), // San Francisco
+                        center: new google.maps.LatLng(64.1333, 21.9333), // Reykjavik
 
                 // How you would like to style the map. 
                 // This is where you would paste any style found on Snazzy Maps.
                         styles: [{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"-64"},{"lightness":"31"},{"gamma":"1.65"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"lightness":"-8"},{"saturation":"-7"},{"gamma":"1.52"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"},{"hue":"#ff0045"},{"saturation":"3"},{"lightness":"1"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#2f173f"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-58"},{"lightness":"3"},{"hue":"#b800ff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
                     };
                     //var mapElement = document.getElementById('mapsan-francisco');
-                    var map = new google.maps.Map(document.getElementById('mapsan-francisco'), {
-                      center: {lat: 37.78, lng: -122.44},
+                    var map = new google.maps.Map(document.getElementById('mapreykjavik'), {
+                      center: {lat: 64.1333, lng: 21.9333},
                       styles: [{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"-64"},{"lightness":"31"},{"gamma":"1.65"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"lightness":"-8"},{"saturation":"-7"},{"gamma":"1.52"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"},{"hue":"#ff0045"},{"saturation":"3"},{"lightness":"1"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#2f173f"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-58"},{"lightness":"3"},{"hue":"#b800ff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
                   ,
                       zoom: 12
@@ -95,26 +95,26 @@ function geo(){
                     });
                 break;
 
-                case 'mapnew-york':
+                case 'mapshanghai':
                     var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
                         zoom: 13,
                 // The latitude and longitude to center the map (always required)
-                        center: new google.maps.LatLng(40.7127, -74.0059), // New York
+                        center: new google.maps.LatLng(31.2000, 121.5000), // Shanghai
                 // How you would like to style the map. 
                 // This is where you would paste any style found on Snazzy Maps.
                         styles: [{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"-64"},{"lightness":"31"},{"gamma":"1.65"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"lightness":"-8"},{"saturation":"-7"},{"gamma":"1.52"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"},{"hue":"#ff0045"},{"saturation":"3"},{"lightness":"1"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#2f173f"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-58"},{"lightness":"3"},{"hue":"#b800ff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
                     };
-                    var mapElement = document.getElementById('mapnew-york');
+                    var mapElement = document.getElementById('mapshanghai');
                     // Create the Google Map using our element and options defined above
                      var map = new google.maps.Map(mapElement, mapOptions);
                 break;
-                case 'maplondon':
+                case 'mapbarcelona':
                     var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
                         zoom: 12,
                 // The latitude and longitude to center the map (always required)
-                        center: new google.maps.LatLng(51.507409, -0.127489), // London
+                        center: new google.maps.LatLng(41.3833, 2.1833), // Barcelona
                 // How you would like to style the map. 
                 // This is where you would paste any style found on Snazzy Maps.
                         styles: [{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"-64"},{"lightness":"31"},{"gamma":"1.65"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"lightness":"-8"},{"saturation":"-7"},{"gamma":"1.52"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"},{"hue":"#ff0045"},{"saturation":"3"},{"lightness":"1"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#2f173f"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-58"},{"lightness":"3"},{"hue":"#b800ff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
@@ -123,26 +123,13 @@ function geo(){
                     // Create the Google Map using our element and options defined above
                      var map = new google.maps.Map(mapElement, mapOptions);
                 break;
-                case 'mapgibraltar':
-                    var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                        zoom: 12,
-                // The latitude and longitude to center the map (always required)
-                        center: new google.maps.LatLng(36.134477, -5.350000), // Gibraltar
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
-                        styles: [{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"-64"},{"lightness":"31"},{"gamma":"1.65"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"lightness":"-8"},{"saturation":"-7"},{"gamma":"1.52"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"},{"hue":"#ff0045"},{"saturation":"3"},{"lightness":"1"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#2f173f"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-58"},{"lightness":"3"},{"hue":"#b800ff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
-                    };
-                    var mapElement = document.getElementById('mapgibraltar');
-                    // Create the Google Map using our element and options defined above
-                     var map = new google.maps.Map(mapElement, mapOptions);
-                break;
+                
                 default:
                     var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
                     zoom: 2,
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(37.78, -122.44), // San Francisco
+                    center: new google.maps.LatLng(40.7127, 74.0059), // New York
                     // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.
                     styles: [{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"-64"},{"lightness":"31"},{"gamma":"1.65"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"lightness":"-8"},{"saturation":"-7"},{"gamma":"1.52"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"},{"hue":"#ff0045"},{"saturation":"3"},{"lightness":"1"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#2f173f"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-58"},{"lightness":"3"},{"hue":"#b800ff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
@@ -152,59 +139,44 @@ function geo(){
             var mapElement = document.getElementById('map');
             // Create the Google Map using our element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
-            // Let's add a marker for San Francisco:
+            // Let's add a marker for New York:
             var marker1 = new google.maps.Marker({
-                position: new google.maps.LatLng(37.78, -122.44),
+                position: new google.maps.LatLng(40.7127, 74.0059),
                 map: map,
                 title: 'Snazzy!'
             });
 
             // Adds link to maker
             google.maps.event.addListener(marker1, 'click', function() { 
-              window.location = "/cities/san-francisco";
+              window.location = "/cities/reykjavik";
             });
 
-            // Let's also add a marker for New York:
+            // Let's also add a marker for Shanghai:
             var marker2 = new google.maps.Marker({
-                position: new google.maps.LatLng(40.7127, -74.0059),
+                position: new google.maps.LatLng(31.2000, 121.5000),
                 map: map,
                 title: 'Snazzy!'
             });
 
             // Adds link to maker
             google.maps.event.addListener(marker2, 'click', function() { 
-              window.location = "/cities/new-york";
+              window.location = "/cities/shanghai";
             });
 
-            // Let's also add a marker for Gibraltar:
+            // Let's also add a marker for Barcelona:
             var marker3 = new google.maps.Marker({
-                position: new google.maps.LatLng(36.134477, -5.350000),
+                position: new google.maps.LatLng(41.3833, 2.1833),
                 map: map,
                 title: 'Snazzy!'
             });
 
             // Adds link to maker
             google.maps.event.addListener(marker3, 'click', function() { 
-              window.location = "cities/london";
+              window.location = "cities/barcelona";
             });
 
-            // Let's also add a marker for London:
-            var marker4 = new google.maps.Marker({
-                position: new google.maps.LatLng(51.507409, -0.127489),
-                map: map,
-                title: 'Snazzy!'
-            });
-
-            // Adds link to maker
-            google.maps.event.addListener(marker4, 'click', function() { 
-              window.location = "/cities/gibraltar";
-            });
+      
         }   
         }
 
-        // ------- WOW ANIMATED ------ //
-  wow = new WOW(
-  {
-    mobile: false
-  });
-  wow.init();
+ 
