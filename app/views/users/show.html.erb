@@ -1,41 +1,33 @@
+<section id="form">
+  <div class="profile-background">
 
+   <div class="container">
+        <div class="row">
 
-<section class="block-parallax-1">
-  <div class="profile-bg">
-    <div class="col-md-12 col-xs-12" align="center">
-      <div class="center-block">
-      <br>
-      <br>
-      <br>
-      <br>
-        <div class="outter"><%= image_tag @user.avatar.url(:thumb), :class => 'image-circle'%></div>  
-        <h1>  Welcome, <%= @user.artist_name %> </h1>
-        <h3>  USERNAME: <%= @user.username %> <br>
+          <div class="col-md-6 features-leftcol">
+      <!--   <img class="img-circle" width="140" alt=""><%= image_tag @user.avatar.url(:thumb), class: "image-circle" %></img> -->
+
+        <h2>  Welcome, <%= @user.artist_name %> </h2>
+        <p>  USERNAME: <%= @user.username %> <br>
           CURRENT CITY: <%= @user.current_city %> <br>
           JOINED: <%= local_time_ago(@user.created_at) %> <br>
           CONTRIBUTED TO: <% @count.count.each do |count| %>
                 <%=City.find(count[0]).name %> ,
           <%end%>
-        </h3> 
-        <br>
-        <main-button><% if @user.id == @current_user.id%>
-        <%=link_to 'EDIT PROFILE', edit_user_path(@user), class: "main-button" %>
+        </p> 
+        <% if @user.id == @current_user.id%>
+        <div class= "button">
+        <%=link_to 'EDIT PROFILE', edit_user_path(@user), class: "button" %>
         <%end%>
-      </main-button>
+        </div>
+      </div>
+      </div>
+ 
   </div>
-</div>
-</section>
+ 
 
-
-<section class="block-parallax-1  block-parallax-2">
-          <section style="min-height:400px;">
-                <div class="profile2-bg" repeat>
-           <div class="container-bottom">
-             <br>
-             <br>
-             <br>
-         
-         <div class="container">
+     <div class="col-md-6 features-rightcol">
+      
              <div class= "centerbutton">
           <main-button><%= link_to "ADD POST", "/cities", 'data-no-turbolink' => true, class: "main-button" %> </main-button>
           </div>
@@ -82,7 +74,7 @@
                       <%elsif count[1] > 1  %>
                         <a class: "main-button" style="color: yellow"><%=City.find(count[0]).name %> : <%=count[1]%> posts </a>
                     <%end%>
-                    /
+                    
                   </main-button>
                 <%end%>
                 </div>
@@ -96,5 +88,5 @@
             
              </div>
              </div>
-             </section>
-             </section>
+             </section> 
+
